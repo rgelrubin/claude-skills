@@ -14,8 +14,3 @@ documentation, commentaires de code, messages de commit, descriptions de PR, con
 - Recopier cette règle dans toute consigne confiée à un sous-agent ou à un autre outil.
 - Avant de rendre un travail, chercher le caractère dans ce qui a été écrit et le retirer.
 - Un fichier existant qui en contient : les retirer dans les passages que l'on modifie, et le signaler à l'utilisateur.
-
-## Le dépôt
-Dépôt public : n'y mettre aucun secret, aucune donnée personnelle, aucune information confidentielle d'un client ou d'un
-employeur. Chaque skill vit dans `skills/<nom>/SKILL.md` ; `config/` porte les consignes globales et les réglages ;
-`install.sh` installe le tout dans une session cloud (voir le README).

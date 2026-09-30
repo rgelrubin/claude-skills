@@ -1,6 +1,4 @@
-# Guide pour les agents de code
-
-Ce fichier s'adresse à tout agent de code, quel qu'il soit. Il ne suppose aucun outil ni aucun modèle particulier.
+# Consignes globales de l'utilisateur, pour tout agent de code
 
 ## Règle d'écriture absolue : aucun tiret cadratin
 Le tiret cadratin (caractère U+2014) est **totalement interdit**, sans aucune exception, ainsi que le demi-cadratin
@@ -15,7 +13,11 @@ documentation, commentaires de code, messages de commit, descriptions de PR, con
 - Avant de rendre un travail, chercher le caractère dans ce qui a été écrit et le retirer.
 - Un fichier existant qui en contient : les retirer dans les passages que l'on modifie, et le signaler à l'utilisateur.
 
-## Le dépôt
-Dépôt public : n'y mettre aucun secret, aucune donnée personnelle, aucune information confidentielle d'un client ou d'un
-employeur. Chaque skill vit dans `skills/<nom>/SKILL.md` ; `config/` porte les consignes globales et les réglages ;
-`install.sh` installe le tout dans une session cloud (voir le README).
+## À chaque nouveau dépôt
+Dès qu'un dépôt est créé ou initialisé (`git init`, nouveau projet, premier commit d'un dossier), y placer à la racine
+un `AGENTS.md` qui contient la règle ci-dessus (gabarit : `~/.agents/templates/new-repo/AGENTS.md`), et un `CLAUDE.md`
+d'une ligne, `@AGENTS.md`. Dans un dépôt existant qui n'a pas encore la règle, l'ajouter à son `AGENTS.md` à la première
+occasion. Les consignes d'un dépôt s'écrivent toujours de façon neutre vis-à-vis de l'agent : `AGENTS.md`,
+`.agents/skills/`, aucun outil ni modèle nommé.
+
+Source commune à tous les agents : `~/.agents/AGENTS.md` (garder les deux fichiers identiques).

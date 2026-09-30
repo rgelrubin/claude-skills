@@ -1,0 +1,14 @@
+{
+  "outputStyle": "Concise",
+  "extraKnownMarketplaces": {
+    "eodhd-claude-skills": {
+      "source": {
+        "source": "git",
+        "url": "https://github.com/EodHistoricalData/eodhd-claude-skills.git"
+      }
+    }
+  },
+  "enabledPlugins": {
+    "eodhd-api@eodhd-claude-skills": true
+  }
+}
