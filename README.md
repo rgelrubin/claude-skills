@@ -12,8 +12,13 @@ Les sessions cloud tournent sur une machine isolée qui ne voit pas le `~/.claud
 de l'environnement cloud (claude.ai, Code, environnement, script de démarrage), ajouter :
 
 ```bash
-git clone --depth 1 https://github.com/rgelrubin/claude-skills.git /tmp/claude-skills && bash /tmp/claude-skills/install.sh
+#!/bin/bash
+rm -rf /tmp/claude-skills
+git clone --depth 1 https://github.com/rgelrubin/claude-skills.git /tmp/claude-skills && bash /tmp/claude-skills/install.sh || echo "claude-skills : installation impossible"
 ```
+
+Le repli final évite qu'une indisponibilité de GitHub bloque le démarrage de la session. En place dans l'environnement
+« Default » depuis le 2026-09-30.
 
 L'accès réseau de l'environnement doit autoriser `github.com` (c'est le cas du niveau d'accès par défaut). Une
 modification poussée sur `main` vaut pour toute session lancée ensuite.
